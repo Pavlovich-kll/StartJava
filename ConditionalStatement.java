@@ -1,35 +1,34 @@
 public class ConditionalStatement {
 	public static void main(String [] args) {
-		int myAge;
-		myAge = 24;
-		boolean a = myAge > 20;
-		if(a == true) {
+		int age = 24;
+		boolean a = age > 20;
+		if(age > 20) {
 			System.out.println("Пошёл третий десяток");
 		}
 
-		char imMan = 'M';
-		if(imMan == 'M') {
+		boolean genderM = true;
+		if(genderM == true) {
 			System.out.println("Пол мужской");
 		}
 
-		boolean imNotMan = false;
-		if(imNotMan != true) {
+		boolean genderF = false;
+		if(genderF != true) {
 			System.out.println("Точно не женщина");
 		}
 
-		float myHight= 1.94f;
-		if(myHight > 1.80) {
+		float hight= 1.94f;
+		if(hight > 1.80) {
 			System.out.println("Рост выше среднего");
-		} else{
+		} else {
 			System.out.println("Нормальный рост");
 		}
 
-		char myFirstLetterOfNameKirill = 'K';
-		if(myFirstLetterOfNameKirill == 'M') {
+		char firstNameLetter = 'K';
+		if(firstNameLetter == 'M') {
 			System.out.println("Не старший ребенок в семье");
-		} else if(myFirstLetterOfNameKirill == 'I') {
+		} else if(firstNameLetter == 'I') {
 			System.out.println("Не член семьи");
-		} else{
+		} else {
 			System.out.println("Ни один из предыдущих случаев, так как имя начинается на К");
 		}
 	}
