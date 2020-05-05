@@ -17,8 +17,7 @@ public class Cycle {
 		int result = 9;
 		do {
 			result = result + c;
-			if(result % 2 != 0) {
-			}
+			if(result % 2 != 0);
 			c++;
 		} while(c < 12);
 		System.out.println("Сумма нечетных чисел [10;20]: " + result);
