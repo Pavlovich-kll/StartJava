@@ -1,24 +1,22 @@
 public class MyFirstGame {
 	public static void main(String [] args) {
-		int compValue = 50;
-		int manValue = 99;
-		int a = manValue - compValue;
-		int b = compValue - manValue;
-		System.out.println("Ваше число " + manValue);
+		int compNum = 50;
+		int playerNum = 99;
+		System.out.println("Ваше число " + playerNum);
 		do {
-			if(manValue > compValue) {
-			System.out.println("Ваше число больше, чем загадал компьютер на " + (manValue - compValue));
-			System.out.println("Вы угадали! Это число " + compValue);
+			if(playerNum > compNum) {
+				System.out.println("Ваше число больше, чем загадал компьютер на " + (playerNum - compNum));
+				System.out.println("Вы угадали! Это число " + compNum);
 			} 
 
-			if(manValue < compValue) {
-			System.out.println("Ваше число меньше, чем загадал компьютер на " + (compValue - manValue));
-			System.out.println("Вы угадали! Это число " + compValue);
+			if(playerNum < compNum) {
+				System.out.println("Ваше число меньше, чем загадал компьютер на " + (compNum - playerNum));
+				System.out.println("Вы угадали! Это число " + compNum);
 			} 
 
-			if(manValue == compValue) {
-			System.out.println("Вы угадали! Это число " + compValue);
+			if(playerNum == compNum) {
+				System.out.println("Вы угадали! Это число " + compNum);
 			}
-		} while(manValue == compValue);
+		} while(playerNum == compNum);
 	}
 }

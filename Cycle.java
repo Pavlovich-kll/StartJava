@@ -1,25 +1,28 @@
 public class Cycle {
 	public static void main(String[] args) {
-		System.out.println("Цикл for:");
-		for(int i = 0; i < 21; i++) {;
-			System.out.println( + i);
-		}
+		// System.out.println("Цикл for:");
+		// for(int i = 0; i < 21; i++) {;
+		// 	System.out.println( + i);
+		// }
 
-		System.out.println("Цикл while:");
-		int b = -8;
-		while(b < 5) {
-			b += 2;
-			System.out.println( + b);
-		}
+		// System.out.println("Цикл while:");
+		// int b = 6;
+		// while(b >= - 6) {
+		// 	if(b % 2 == 0) {
+		// 		System.out.println("Число " + b);
+		// 	}
+		// 	b -= 1;
+		// }
 
 		System.out.println("Цикл while do");
-		int c = 1;
-		int result = 9;
+		int c = 10;
+		int result = 0;
 		do {
-			result = result + c;
-			if(result % 2 != 0);
-			c++;
-		} while(c < 12);
+			c = c + 1;
+			if(c % 2 != 0 && c <= 20) {
+				System.out.println("Промежуточная сумма " + (result = result + c));
+			}
+		} while(c <= 20);
 		System.out.println("Сумма нечетных чисел [10;20]: " + result);
 	}
 }
