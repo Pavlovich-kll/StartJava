@@ -1,21 +1,19 @@
 public class ConditionalStatement {
-	public static void main(String [] args) {
+	public static void main(String[] args) {
 		int age = 24;
 		if(age > 20) {
 			System.out.println("Пошёл третий десяток");
 		}
 
-		boolean male1 = true;
-		if(male1 == true) {
+		boolean male = true;
+		if(male == true) {
 			System.out.println("Пол мужской");
 		}
-
-		boolean male2 = false;
-		if(!male2 == true) {
+		if(!male == true) {
 			System.out.println("Тогда это женщина");
 		}
 
-		float hight= 1.94f;
+		float hight = 1.94f;
 		if(hight > 1.80) {
 			System.out.println("Рост выше среднего");
 		} else {
