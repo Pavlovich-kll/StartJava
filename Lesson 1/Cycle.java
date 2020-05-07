@@ -8,17 +8,15 @@ public class Cycle {
 		System.out.println("Цикл while:");
 		int b = 6;
 		while(b >= - 6) {
-			if(b % 2 == 0) {
-				System.out.println("Число " + b);
-			}
-			b -= 1;
+			System.out.println("Число " + b);
+			b -= 2;
 		}
 
 		System.out.println("Цикл while do");
 		int c = 10;
 		int result = 0;
 		do {
-			c += 1;
+			c++;
 			if(c % 2 != 0) {
 				result += c;
 			}
