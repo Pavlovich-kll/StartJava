@@ -23,7 +23,7 @@ public class Wolf {
 		return true;
 	}
 
-		boolean hunt() {
+	boolean hunt() {
 		System.out.println("охотиться");
 		return true;
 	}
