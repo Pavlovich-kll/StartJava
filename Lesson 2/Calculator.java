@@ -6,27 +6,27 @@ int result;
 char mathAction;
 
 switch (mathAction) {
-	case '+': mathAction = '+';
+	case '+':
 	System.out.println(+ result = (number1 + number2));
 	break;
 
-	case '-': mathAction = '-';
+	case '-':
 	System.out.println(+ result = (number1 - number2));
 	break;
 
-	case '*': mathAction = '*';
-	System.out.println(+ result = (number1 * number2))
+	case '*':
+	System.out.println(+ result = (number1 * number2));
 	break;
 
-	case '/': mathAction = '/';
-	System.out.println(+ result = (number1 / number2))
+	case '/':
+	System.out.println(+ result = (number1 / number2));
 	break;
 
-	case '%': mathAction = '%';
+	case '%':
 	System.out.println(+ result = (number1 % number2));
 	break;
 
-	case '^': mathAction = '^';
+	case '^':
 	int c = 1;
 		for(int i = 1; i <= number2; i++) {
 			c *= number1;

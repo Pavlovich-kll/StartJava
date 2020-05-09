@@ -5,7 +5,7 @@ public class CalculatorTest {
 
 		Calculator calcOne = new Calculator();
 		Scanner scan = new Scanner(System.in);
-		String answer;
+		String answer = scan.nextLine();
 
 		do {
 		System.out.println("Введите первое число: ");
@@ -19,7 +19,7 @@ public class CalculatorTest {
 
 		System.out.println("Ответ: " + calcOne.result());
 		System.out.println("Хотите продолжить? ");
-		answer = scan.next();
+		answer = scan.nextLine();
 		} while(answer == "no");
 	}
 }
