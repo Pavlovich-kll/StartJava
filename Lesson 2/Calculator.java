@@ -1,37 +1,95 @@
 public class Calculator {
 
-int number1;
-int number2;
-int result;
-char mathAction;
+private int number1;
+private int number2;
+private int result;
+private char mathAction;
 
-switch (mathAction) {
-	case '+':
-	System.out.println(+ result = (number1 + number2));
-	break;
+public int getNumber1() {
+	return number1;
+}
 
-	case '-':
-	System.out.println(+ result = (number1 - number2));
-	break;
+void setNumber1(int number1) {
+	this.number1 = number1;
+}
 
-	case '*':
-	System.out.println(+ result = (number1 * number2));
-	break;
+public int getNumber2() {
+	return number2;
+}
 
-	case '/':
-	System.out.println(+ result = (number1 / number2));
-	break;
+void setNumber2(int number2) {
+	if(mathAction == '+') {
+		result = number1 + number2;
+	}
 
-	case '%':
-	System.out.println(+ result = (number1 % number2));
-	break;
+	else if(mathAction == '-') {
+		result = number1 - number2;
+	}
 
-	case '^':
-	int c = 1;
+	else if(mathAction == '*') {
+		result = number1 * number2;
+	}
+
+	else if(mathAction == '/') {
+		result = number1 / number2;
+	}
+
+	else if(mathAction == '%') {
+		result = number1 % number2;
+	}
+
+	else if(mathAction == '^') {
+		int c = 1;
 		for(int i = 1; i <= number2; i++) {
 			c *= number1;
+			result = c;
 		}
-	System.out.println(+ result = c);
-	break;
 	}
+	this.number2 = number2;
+}
+
+public int getResult() {
+	return result;
+}
+
+void setResult(int result) {
+	this.result = result;
+}
+
+public char getMathAction() {
+	return mathAction;
+}
+
+void setMathAction(char mathAction) {
+	switch (mathAction) {
+		case '+':
+			// result = number1 + number2;
+			break;
+
+		case '-':
+			// result = number1 - number2;
+			break;
+
+		case '*':
+			// result = number1 * number2;
+			break;
+
+		case '/':
+			// result = number1 / number2;
+			break;
+
+		case '%':
+			// result = number1 % number2;
+			break;
+
+		case '^':
+			// int c = 1;
+			// for(int i = 1; i <= number2; i++) {
+			// 	c *= number1;
+			// }
+			// result = c;
+			break;
+	}
+		this.mathAction = mathAction;
+}
 }

@@ -5,21 +5,22 @@ public class CalculatorTest {
 
 		Calculator calcOne = new Calculator();
 		Scanner scan = new Scanner(System.in);
-		String answer = scan.nextLine();
+		String answerYes = "yes";
+		String answer;
 
 		do {
 		System.out.println("Введите первое число: ");
-		calcOne.number1(scan.nextInt());
+		calcOne.setNumber1(scan.nextInt());
 
 		System.out.println("Введите знак математической операции: ");
-		calcOne.mathAction(scan.next().charAt(0));
+		calcOne.setMathAction(scan.next().charAt(0));
 
 		System.out.println("Введите второе число: ");
-		calcOne.number2(scan.nextInt());
+		calcOne.setNumber2(scan.nextInt());
 
-		System.out.println("Ответ: " + calcOne.result());
+		System.out.println("Ответ: " + calcOne.getResult());
 		System.out.println("Хотите продолжить? ");
-		answer = scan.nextLine();
-		} while(answer == "no");
+		answer = scan.next();
+		} while(answer.equals(answerYes));
 	}
 }
