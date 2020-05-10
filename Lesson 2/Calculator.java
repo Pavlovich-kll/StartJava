@@ -61,35 +61,35 @@ public char getMathAction() {
 }
 
 void setMathAction(char mathAction) {
-	switch (mathAction) {
-		case '+':
-			// result = number1 + number2;
-			break;
+	// switch (mathAction) {
+	// 	case '+':
+	// 		// result = number1 + number2;
+	// 		break;
 
-		case '-':
-			// result = number1 - number2;
-			break;
+	// 	case '-':
+	// 		// result = number1 - number2;
+	// 		break;
 
-		case '*':
-			// result = number1 * number2;
-			break;
+	// 	case '*':
+	// 		// result = number1 * number2;
+	// 		break;
 
-		case '/':
-			// result = number1 / number2;
-			break;
+	// 	case '/':
+	// 		// result = number1 / number2;
+	// 		break;
 
-		case '%':
-			// result = number1 % number2;
-			break;
+	// 	case '%':
+	// 		// result = number1 % number2;
+	// 		break;
 
-		case '^':
-			// int c = 1;
-			// for(int i = 1; i <= number2; i++) {
-			// 	c *= number1;
-			// }
-			// result = c;
-			break;
-	}
+	// 	case '^':
+	// 		// int c = 1;
+	// 		// for(int i = 1; i <= number2; i++) {
+	// 		// 	c *= number1;
+	// 		// }
+	// 		// result = c;
+	// 		break;
+	// }
 		this.mathAction = mathAction;
 }
 }
