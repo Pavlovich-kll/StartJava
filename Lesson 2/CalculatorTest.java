@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class CalculatorTest {
 	public static void main(String[] args) {
 
@@ -8,9 +7,8 @@ public class CalculatorTest {
 		String answerYes = "yes";
 		String answer;
 
-		do {
 		System.out.println("Введите первое число: ");
-		calcOne.setNumber1(scan.nextInt());
+			calcOne.setNumber1(scan.nextInt());
 
 		System.out.println("Введите знак математической операции: ");
 		calcOne.setMathAction(scan.next().charAt(0));
@@ -18,9 +16,19 @@ public class CalculatorTest {
 		System.out.println("Введите второе число: ");
 		calcOne.setNumber2(scan.nextInt());
 
-		System.out.println("Ответ: " + calcOne.getResult());
-		System.out.println("Хотите продолжить? ");
+		System.out.println("Ответ: "+ calcOne.getResult());
+		System.out.println("Хотите продолжить?[yes/no] ");
 		answer = scan.next();
-		} while(answer.equals(answerYes));
+
+		do{
+			if(answer.equals("yes")) {
+				break;
+			} else if(answer.equals("no")) {
+				break;
+			} else if(answer.equals(answer)) {
+				System.out.println("Хотите продолжить?[yes/no] ");
+				answer = scan.next();
+			}
+		} while(answer.equals(answer));
 	}
 }
