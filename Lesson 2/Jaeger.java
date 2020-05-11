@@ -8,6 +8,17 @@ public class Jaeger {
 	private int strenght;
 	private int armor;
 
+	public Jaeger(String x, String y, String z, float x1, float y1, int z1, int x2, int y2) {
+		modelName = x;
+		mark = y;
+		origin = z;
+		height = x1;
+		weight = y1;
+		speed = z1;
+		strenght = x2;
+		armor = y2;
+	}
+
 	public String getModelName() {
 		return modelName;
 	}

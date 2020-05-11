@@ -1,24 +1,7 @@
 public class JaegerTest {
 	public static void main(String[] args) {
-		Jaeger gipsy = new Jaeger();
-		Jaeger striker = new Jaeger();
-
-		striker.setModelName("Striker Eureka");
-		striker.setMark("Mark-5");
-		striker.setOrigin("Australia");
-		striker.setHeight(76.2f);
-		striker.setWeight(1.85f);
-		striker.setSpeed(10);
-		striker.setStrenght(10);
-		striker.setArmor(9);
-		gipsy.setModelName("Gipsy Avenger");
-		gipsy.setMark("Mark-6");
-		gipsy.setOrigin("USA");
-		gipsy.setHeight(81.77f);
-		gipsy.setWeight(2f);
-		gipsy.setSpeed(11);
-		gipsy.setStrenght(10);
-		gipsy.setArmor(10);
+		Jaeger striker = new Jaeger("Striker Eureka", "Mark-5", "Australia", 76.2f, 1.85f, 10, 10, 9);
+		Jaeger gipsy = new Jaeger("Gipsy Avenger", "Mark-6", "USA", 81.77f, 2f, 11, 10, 10);
 
 		System.out.println(striker.getModelName());
 		System.out.println(striker.getMark());
