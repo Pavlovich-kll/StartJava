@@ -16,7 +16,7 @@ public class CalculatorTest {
 		System.out.println("Введите второе число: ");
 		calcOne.setNumber2(scan.nextInt());
 
-		System.out.println("Ответ: "+ calcOne.getResult());
+		System.out.println("Ответ: "+ calcOne.calculate());
 		System.out.println("Хотите продолжить?[yes/no] ");
 		answer = scan.next();
 

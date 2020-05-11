@@ -21,14 +21,6 @@ public class Calculator {
 		this.number2 = number2;
 	}
 
-	public int getResult() {
-		return result;
-	}
-
-	void setResult(int result) {
-		this.result = result;
-	}
-
 	public char getMathAction() {
 		return mathAction;
 	}
@@ -37,35 +29,36 @@ public class Calculator {
 		this.mathAction = mathAction;
 	}
 
-	public void calculate() {
+	public int calculate() {
 		switch (mathAction) {
 			case '+':
 				result = number1 + number2;
-				break;
+				return number1 + number2;
 
 			case '-':
 				result = number1 - number2;
-				break;
+				return number1 - number2;
 
 			case '*':
 				result = number1 * number2;
-				break;
+				return number1 * number2;
 
 			case '/':
 				result = number1 / number2;
-				break;
+				return number1 / number2;
 
 			case '%':
 				result = number1 % number2;
-				break;
+				return number1 % number2;
 
 			case '^':
 				int c = 1;
 				for(int i = 1; i <= number2; i++) {
 					c *= number1;
 				}
-				result = c;
-				break;
+				return c;
 		}
+		System.out.println("Ответ: " + result);
+		return result;
 	}
 }
