@@ -1,8 +1,7 @@
 public class Calculator {
 
-	private int number1;
-	private int number2;
-	private int result;
+	int number1;
+	int number2;
 	private char mathAction;
 
 	public int getNumber1() {
@@ -32,33 +31,21 @@ public class Calculator {
 	public int calculate() {
 		switch (mathAction) {
 			case '+':
-				result = number1 + number2;
 				return number1 + number2;
-
 			case '-':
-				result = number1 - number2;
 				return number1 - number2;
-
 			case '*':
-				result = number1 * number2;
 				return number1 * number2;
-
 			case '/':
-				result = number1 / number2;
 				return number1 / number2;
-
 			case '%':
-				result = number1 % number2;
 				return number1 % number2;
-
 			case '^':
-				int c = 1;
+				int result = 1;
 				for(int i = 1; i <= number2; i++) {
-					c *= number1;
+					result *= number1;
 				}
-				return c;
-		}
-		System.out.println("Ответ: " + result);
-		return result;
+				return result;
+		} return calculate();
 	}
 }
