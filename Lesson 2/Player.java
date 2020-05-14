@@ -1,26 +1,26 @@
 public class Player {
-	private String name1;
-	private int number1;
+	private String name;
+	private int number;
 
-	public String getName1() {
-		return name1;
+	public String getName() {
+		return name;
 	}
 
-	void setName1(String name1) {
-		this.name1 = name1;
+	void setName(String name) {
+		this.name = name;
 	}
 
-	public int getNumber1() {
-		return number1;
+	public int getNumber() {
+		return number;
 	}
 
-	int setNumber1(int number1) {
-		if(number1 < 0 || number1 > 100) {
+	int setNumber(int number) {
+		if(number < 0 || number > 100) {
 			System.out.println("некорректное число");
 		}
 		else {
-			this.number1 = number1;
+			this.number = number;
 		}
-		return number1;
+		return number;
 	}
 }
