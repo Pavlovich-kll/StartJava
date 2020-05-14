@@ -10,9 +10,9 @@ public class GuessNumberTest {
 		System.out.println("Компьютер загадывает число от 0 до 100, а двое игроков по очереди отгадывают.");
 		do{
 			System.out.println("Введите имя первого игрока:");
-			gn.pl.setName1(scan.next());
+			gn.pl1.setName1(scan.next());
 			System.out.println("Введите имя второго игрока:");
-			gn.pl.setName2(scan.next());
+			gn.pl2.setName2(scan.next());
 			gn.calculate();
 			do {
 				System.out.println("Хотите продолжить?[yes/no] ");
