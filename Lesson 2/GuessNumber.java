@@ -1,12 +1,17 @@
 import java.util.Scanner;
 
 public class GuessNumber {
-	Player pl1 = new Player();
-	Player pl2 = new Player();
+	Player pl1;
+	Player pl2;
 	Scanner scan = new Scanner(System.in);
 	int compNumber = (int) (Math.random() * (100 + 1));
 
-	public void calculate() {
+	public GuessNumber(Player pl1, Player pl2) {
+		this.pl1 = pl1;
+		this.pl2 = pl2;
+	}
+
+	public void startGame() {
 		do {
 			System.out.println("Ходит игрок " + pl1.getName());
 			pl1.setNumber(scan.nextInt());

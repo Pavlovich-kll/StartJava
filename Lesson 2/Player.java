@@ -6,7 +6,7 @@ public class Player {
 		return name;
 	}
 
-	void setName(String name) {
+	public void setName(String name) {
 		this.name = name;
 	}
 
@@ -14,13 +14,11 @@ public class Player {
 		return number;
 	}
 
-	int setNumber(int number) {
+	public void setNumber(int number) {
 		if(number < 0 || number > 100) {
 			System.out.println("некорректное число");
-		}
-		else {
+		} else {
 			this.number = number;
 		}
-		return number;
 	}
 }
