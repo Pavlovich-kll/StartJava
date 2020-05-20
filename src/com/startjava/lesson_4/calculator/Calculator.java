@@ -4,7 +4,7 @@ public class Calculator {
 
     private String srcMathExp;
 
-    public void setSt(String mathExp) {
+    public void setSrcMathExp(String mathExp) {
         this.srcMathExp = mathExp;
     }
 
