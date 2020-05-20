@@ -19,7 +19,7 @@ public class CalculatorMain {
                     break;
                 }
             } while (!answer.equals("yes"));
-        } while (true);
+        } while (answer.equals("yes"));
     }
 }
 
