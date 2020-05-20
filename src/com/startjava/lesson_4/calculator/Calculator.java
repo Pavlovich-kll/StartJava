@@ -2,43 +2,37 @@ package com.startjava.lesson_4.calculator;
 
 public class Calculator {
 
-    private String st;
+    private String srcMathExp;
 
-    public void setSt(String st) {
-        this.st = st;
+    public void setSt(String mathExp) {
+        this.srcMathExp = mathExp;
     }
 
-    public Calculator(String st) {
-        this.st = st;
+    public Calculator(String mathExp) {
+        this.srcMathExp = mathExp;
     }
 
     public int calculate() {
-
-        String[] numb = st.split("\\W");
-        int[] numbers = new int[numb.length];
-        for (int i = 0; i <= numbers.length; i=i+3) {
-            numbers[i] = Integer.parseInt(numb[i]);
+        String[] obj = srcMathExp.split("\\s");
+        int[] numb = new int[obj.length];
+        for (int i = 0; i < obj.length; i = i + 2) {
+            numb[i] = Integer.parseInt(obj[i]);
         }
-        String[] mathAction = st.split("\\s*\\d+\\s*");
-        int res = numbers[0];
-        for (int i = 1; i < mathAction.length; i++) {
-            if (mathAction[i].equals("+")) {
-                res += numbers[i+2];
-            }
-            if (mathAction[i].equals("-")) {
-                res -= numbers[i+2];
-            }
-            if (mathAction[i].equals("/")) {
-                res /= numbers[i+2];
-            }
-            if (mathAction[i].equals("*")) {
-                res *= numbers[i+2];
-            }
-            if (mathAction[i].equals("%")) {
-                res %= numbers[i+2];
-            }
-            if (mathAction[i].equals("^")) {
-                res = (int) Math.pow(res, numbers[i+2]);
+        int res = numb[0];
+        for (int i = 1; i < obj.length; i++) {
+            switch (obj[1]) {
+                case "+":
+                    return res += numb[i + 1];
+                case "-":
+                    return res -= numb[i + 1];
+                case "*":
+                    return res *= numb[i + 1];
+                case "/":
+                    return res /= numb[i + 1];
+                case "%":
+                    return res %= numb[i + 1];
+                case "^":
+                    return res = (int) Math.pow(res, numb[i + 1]);
             }
         }
         return res;

@@ -6,11 +6,20 @@ public class CalculatorMain {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
-        System.out.println("Введите математическое выражение (например 5 ^ 6): ");
-        String st = sc.nextLine();
-        Calculator calcOne = new Calculator(st);
-        System.out.println("Ответ: " + calcOne.calculate());
+        String answer;
+        do {
+            System.out.println("Введите математическое выражение (например 5 ^ 6): ");
+            String mathExp = sc.nextLine();
+            Calculator calc = new Calculator(mathExp);
+            System.out.println("Ответ: " + calc.calculate());
+            do {
+                System.out.println("Хотите продолжить?[yes/no] ");
+                answer = sc.next();
+                if (answer.equals("no")) {
+                    break;
+                }
+            } while (!answer.equals("yes"));
+        } while (true);
     }
 }
 
