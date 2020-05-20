@@ -14,7 +14,7 @@ public class CalculatorMain {
             System.out.println("Ответ: " + calc.calculate());
             do {
                 System.out.println("Хотите продолжить?[yes/no] ");
-                answer = sc.next();
+                answer = sc.nextLine();
                 if (answer.equals("no")) {
                     break;
                 }
