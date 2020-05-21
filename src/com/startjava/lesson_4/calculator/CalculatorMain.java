@@ -15,10 +15,7 @@ public class CalculatorMain {
             do {
                 System.out.println("Хотите продолжить?[yes/no] ");
                 answer = sc.nextLine();
-                if (answer.equals("no")) {
-                    break;
-                }
-            } while (!answer.equals("yes"));
+            } while (!answer.equals("yes") && !answer.equals("no"));
         } while (answer.equals("yes"));
     }
 }
