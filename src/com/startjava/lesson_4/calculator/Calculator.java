@@ -13,23 +13,23 @@ public class Calculator {
     }
 
     public int calculate() {
-        String[] obj = srcMathExp.split("\\s");
-        int res = Integer.parseInt(obj[0]);
-        int number2 = Integer.parseInt(obj[2]);
-            switch (obj[1]) {
-                case "+":
-                    return res += number2;
-                case "-":
-                    return res -= number2;
-                case "*":
-                    return res *= number2;
-                case "/":
-                    return res /= number2;
-                case "%":
-                    return res %= number2;
-                case "^":
-                    return res = (int) Math.pow(res, number2);
-            }
-            return res;
+        String[] splitMathExp = srcMathExp.split("\\s");
+        int num1 = Integer.parseInt(splitMathExp[0]);
+        int num2 = Integer.parseInt(splitMathExp[2]);
+        switch (splitMathExp[1]) {
+            case "+":
+                return num1 + num2;
+            case "-":
+                return num1 - num2;
+            case "*":
+                return num1 * num2;
+            case "/":
+                return num1 / num2;
+            case "%":
+                return num1 % num2;
+            case "^":
+                return (int) Math.pow(num1, num2);
+        }
+        return calculate();
         }
     }
