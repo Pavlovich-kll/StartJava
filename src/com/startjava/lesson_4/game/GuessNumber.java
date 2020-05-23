@@ -29,8 +29,6 @@ public class GuessNumber {
 				break;
 			} else if (i1 == 9) {
 				System.out.println("У игрока " + pl1.getName() + " число попыток закончилось!");
-//				i1 = i1 - 1;
-//				break;
 			} else if (numb1 < compNumber) {
 				System.out.println(pl1.getName() + " увеличь число!");
 			} else if (numb1 > compNumber) {
