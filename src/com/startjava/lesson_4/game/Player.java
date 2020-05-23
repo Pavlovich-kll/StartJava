@@ -1,41 +1,38 @@
 package com.startjava.lesson_4.game;
 
 public class Player {
-    private String name;
-    private int number;
-    private int masNumb;
+	private String name;
+	private int numb;
+	private int i = 0;
 
-    public Player(String name) {
-        this.name = name;
-    }
+	public Player(String name) {
+		this.name = name;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public int getNumber() {
-        return number;
-    }
+	public void setNumb(int numb) {
+		this.numb = numb;
+	}
 
-    public void setNumber(int number) {
-        if(number < 0 || number > 100) {
-            System.out.println("некорректное число");
-        } else {
-            this.number = number;
-        }
-    }
 
-    public int getMasNumb() {
-        return masNumb;
-    }
+	int[] saveNumb1 = new int[11];
+	public int[] SaveNumbers1() {
+		saveNumb1[i] = numb;
+		i++;
+		return saveNumb1;
+	}
 
-    public int setMasNumb(int masNumb) {
-        this.masNumb = masNumb;
-        return masNumb;
-    }
+	int[] saveNumb2 = new int[11];
+	public int[] SaveNumbers2() {
+		saveNumb2[i] = numb;
+		i++;
+		return saveNumb2;
+	}
 }
-
