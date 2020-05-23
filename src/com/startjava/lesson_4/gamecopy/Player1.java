@@ -5,6 +5,7 @@ import java.util.Arrays;
 public class Player1 {
 	private String name;
 	private int numb;
+	private int i = 0;
 
 	public Player1(String name) {
 		this.name = name;
@@ -18,27 +19,22 @@ public class Player1 {
 		this.name = name;
 	}
 
-	public Player1(int numb) {
+	public void setNumb(int numb) {
 		this.numb = numb;
 	}
 
-	public int getNumb() {
-		return numb;
-	}
 
+	int[] saveNumb1 = new int[11];
 	public int[] SaveNumbers1() {
-		int[] saveNumb1 = new int[10];
-		for (int i = 0; i < 10; i++) {
-			saveNumb1[i] = numb;
-		}
+		saveNumb1[i] = numb;
+		i++;
 		return saveNumb1;
 	}
 
+	int[] saveNumb2 = new int[11];
 	public int[] SaveNumbers2() {
-		int[] saveNumb2 = new int[10];
-		for (int i = 0; i < 10; i++) {
-			saveNumb2[i] = numb;
-		}
+		saveNumb2[i] = numb;
+		i++;
 		return saveNumb2;
 	}
 }

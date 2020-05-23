@@ -20,16 +20,17 @@ public class GuessNumber1 {
 		do {
 			System.out.println("Ходит игрок " + pl1.getName());
 			int numb1 = scan.nextInt();
-			Player1 p1 = new Player1(numb1);
-			p1.SaveNumbers1();
+			pl1.setNumb(numb1);
+			System.out.println(Arrays.toString(pl1.SaveNumbers1()));
 			if (numb1 == compNumber) {
 				System.out.println("игрок " + pl1.getName() + " выигрывает!");
 				System.out.println("Игрок " + pl1.getName() + " угадал число " + compNumber + " с " + (i1 + 1) + " попытки.");
 				i2 = i2 - 1;
 				break;
 			} else if (i1 == 9) {
-				System.out.println("Число попыток закончилось!");
-				break;
+				System.out.println("У игрока " + pl1.getName() + " число попыток закончилось!");
+//				i1 = i1 - 1;
+//				break;
 			} else if (numb1 < compNumber) {
 				System.out.println(pl1.getName() + " увеличь число!");
 			} else if (numb1 > compNumber) {
@@ -38,15 +39,16 @@ public class GuessNumber1 {
 			i1++;
 			System.out.println("Ходит игрок " + pl2.getName());
 			int numb2 = scan.nextInt();
-			Player1 p2 = new Player1(numb2);
-			p2.SaveNumbers2();
+			pl2.setNumb(numb2);
+			System.out.println(Arrays.toString(pl2.SaveNumbers2()));
 			if (numb2 == compNumber) {
 				System.out.println("игрок " + pl2.getName() + " выигрывает!");
 				System.out.println("Игрок " + pl2.getName() + " угадал число " + compNumber + " с " + (i2 + 1) + " попытки.");
 				i1 = i1 - 1;
 				break;
 			} else if (i2 == 9) {
-				System.out.println("Число попыток закончилось!");
+				System.out.println("У игрока " + pl2.getName() + " число попыток закончилось!");
+				i1 = i1 - 1;
 				break;
 			} else if (numb2 < compNumber) {
 				System.out.println(pl2.getName() + " увеличь число!");
@@ -54,7 +56,7 @@ public class GuessNumber1 {
 				System.out.println(pl2.getName() + " уменьши число!");
 			}
 			i2++;
-		} while (true);
+		} while (i1 <= 10 && i2 <= 10);
 		int[] copySaveNumb1 = Arrays.copyOf(pl1.SaveNumbers1(), (i1 + 1));
 		int[] copySaveNumb2 = Arrays.copyOf(pl2.SaveNumbers2(), (i2 + 1));
 		System.out.println("Введенные игроком "  + pl1.getName() +  " числа: " + Arrays.toString(copySaveNumb1));
