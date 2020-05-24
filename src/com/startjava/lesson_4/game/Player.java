@@ -21,7 +21,6 @@ public class Player {
 		this.numb = numb;
 	}
 
-
 	int[] saveNumb1 = new int[11];
 	public int[] SaveNumbers1() {
 		saveNumb1[i] = numb;

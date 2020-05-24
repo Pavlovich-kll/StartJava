@@ -6,6 +6,8 @@ import java.util.Scanner;
 public class GuessNumber {
 	private Player pl1;
 	private Player pl2;
+	private int numb1;
+	private int numb2;
 	private int compNumber = (int) (Math.random() * (100 + 1));
 	Scanner scan = new Scanner(System.in);
 
@@ -19,9 +21,9 @@ public class GuessNumber {
 		int i2 = 0;
 		do {
 			System.out.println("Ходит игрок " + pl1.getName());
-			int numb1 = scan.nextInt();
+			numb1 = scan.nextInt();
 			pl1.setNumb(numb1);
-			System.out.println(Arrays.toString(pl1.SaveNumbers1()));
+			Arrays.toString(pl1.SaveNumbers1());
 			if (numb1 == compNumber) {
 				System.out.println("игрок " + pl1.getName() + " выигрывает!");
 				System.out.println("Игрок " + pl1.getName() + " угадал число " + compNumber + " с " + (i1 + 1) + " попытки.");
@@ -36,9 +38,9 @@ public class GuessNumber {
 			}
 			i1++;
 			System.out.println("Ходит игрок " + pl2.getName());
-			int numb2 = scan.nextInt();
+			numb2 = scan.nextInt();
 			pl2.setNumb(numb2);
-			System.out.println(Arrays.toString(pl2.SaveNumbers2()));
+			Arrays.toString(pl2.SaveNumbers2());
 			if (numb2 == compNumber) {
 				System.out.println("игрок " + pl2.getName() + " выигрывает!");
 				System.out.println("Игрок " + pl2.getName() + " угадал число " + compNumber + " с " + (i2 + 1) + " попытки.");
