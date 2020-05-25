@@ -22,8 +22,8 @@ public class GuessNumber {
 		do {
 			System.out.println("Ходит игрок " + pl1.getName());
 			num1 = scan.nextInt();
-			pl1.setNum(num1);
-			System.out.println(Arrays.toString(pl1.SaveNums()));
+			pl1.setEnteredNum(num1);
+			System.out.println(Arrays.toString(pl1.enteredNums(num1)));
 			if (num1 == compNum) {
 				System.out.println("игрок " + pl1.getName() + " выигрывает!");
 				System.out.println("Игрок " + pl1.getName() + " угадал число " + compNum + " с " + (i1 + 1) + " попытки.");
@@ -39,8 +39,8 @@ public class GuessNumber {
 			i1++;
 			System.out.println("Ходит игрок " + pl2.getName());
 			num2 = scan.nextInt();
-			pl2.setNum(num2);
-			System.out.println(Arrays.toString(pl2.SaveNums()));
+			pl2.setEnteredNum(num2);
+			System.out.println(Arrays.toString(pl2.enteredNums(num2)));
 			if (num2 == compNum) {
 				System.out.println("игрок " + pl2.getName() + " выигрывает!");
 				System.out.println("Игрок " + pl2.getName() + " угадал число " + compNum + " с " + (i2 + 1) + " попытки.");
@@ -57,8 +57,8 @@ public class GuessNumber {
 			}
 			i2++;
 		} while (i1 <= 9 && i2 <= 9);
-		int[] copySaveNumb1 = Arrays.copyOf(pl1.SaveNums(), (i1 + 1));
-		int[] copySaveNumb2 = Arrays.copyOf(pl2.SaveNums(), (i2 + 1));
+		int[] copySaveNumb1 = Arrays.copyOf(pl1.enteredNums(num1), (i1 + 1));
+		int[] copySaveNumb2 = Arrays.copyOf(pl2.enteredNums(num2), (i2 + 1));
 		System.out.println("Введенные игроком "  + pl1.getName() +  " числа: " + Arrays.toString(copySaveNumb1));
 		System.out.println("Введенные игроком "  + pl2.getName() +  " числа: " + Arrays.toString(copySaveNumb2));
 		Arrays.fill(copySaveNumb1,0);
