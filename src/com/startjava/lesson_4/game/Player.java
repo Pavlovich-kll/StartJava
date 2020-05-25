@@ -2,8 +2,19 @@ package com.startjava.lesson_4.game;
 
 public class Player {
 	private String name;
-	private int numb;
+	private int num;
 	private int i = 0;
+	public int[] saveNum = new int[10];
+
+	public int[] SaveNums() {
+		saveNum[i] = num;
+		if(i == 9) {
+			i--;
+		} else if(i < 9) {
+			i++;
+		}
+		return saveNum;
+	}
 
 	public Player(String name) {
 		this.name = name;
@@ -17,21 +28,7 @@ public class Player {
 		this.name = name;
 	}
 
-	public void setNumb(int numb) {
-		this.numb = numb;
-	}
-
-	int[] saveNumb1 = new int[11];
-	public int[] SaveNumbers1() {
-		saveNumb1[i] = numb;
-		i++;
-		return saveNumb1;
-	}
-
-	int[] saveNumb2 = new int[11];
-	public int[] SaveNumbers2() {
-		saveNumb2[i] = numb;
-		i++;
-		return saveNumb2;
+	public void setNum(int num) {
+		this.num = num;
 	}
 }
