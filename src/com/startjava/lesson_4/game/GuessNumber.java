@@ -23,7 +23,7 @@ public class GuessNumber {
 			System.out.println("Ходит игрок " + pl1.getName());
 			num1 = scan.nextInt();
 			pl1.setEnteredNum(num1);
-			System.out.println(Arrays.toString(pl1.enteredNums(num1)));
+			pl1.getEnteredNum();
 			if (num1 == compNum) {
 				System.out.println("игрок " + pl1.getName() + " выигрывает!");
 				System.out.println("Игрок " + pl1.getName() + " угадал число " + compNum + " с " + (i1 + 1) + " попытки.");
@@ -40,7 +40,7 @@ public class GuessNumber {
 			System.out.println("Ходит игрок " + pl2.getName());
 			num2 = scan.nextInt();
 			pl2.setEnteredNum(num2);
-			System.out.println(Arrays.toString(pl2.enteredNums(num2)));
+			pl2.getEnteredNum();
 			if (num2 == compNum) {
 				System.out.println("игрок " + pl2.getName() + " выигрывает!");
 				System.out.println("Игрок " + pl2.getName() + " угадал число " + compNum + " с " + (i2 + 1) + " попытки.");
