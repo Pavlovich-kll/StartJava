@@ -27,12 +27,13 @@ public class GuessNumber {
 				winOfPlayer(i1, pl1);
 				i2 = i2 - 1;
 				break;
-			} else if (i1 == 9) {
-				endOfAttempts("У игрока ", pl1, " число попыток закончилось!");
+			}
+			else if (i1 == 9) {
+				System.out.println("У игрока " + pl1.getName() + " число попыток закончилось!");
 			} else if (num1 < compNum) {
-				compareOfNumber(pl1, " увеличь число!");
+				System.out.println(pl1.getName() + " увеличь число!");
 			} else if (num1 > compNum) {
-				compareOfNumber(pl1, " уменьши число!");
+				System.out.println(pl1.getName() + " уменьши число!");
 			}
 			i1++;
 			System.out.println("Ходит игрок " + pl2.getName());
@@ -43,26 +44,18 @@ public class GuessNumber {
 				i1 = i1 - 1;
 				break;
 			} else if (i2 == 9) {
-				endOfAttempts("У игрока ", pl2, " число попыток закончилось!");
+				System.out.println("У игрока " + pl2.getName() + " число попыток закончилось!");
 				i1 = i1 - 1;
 				break;
 			} else if (num2 < compNum) {
-				compareOfNumber(pl2, " увеличь число!");
+				System.out.println(pl2.getName() + " увеличь число!");
 			} else if (num2 > compNum) {
-				compareOfNumber(pl2, " уменьши число!");
+				System.out.println(pl2.getName() + " уменьши число!");
 			}
 			i2++;
 		} while (i1 <= 9 && i2 <= 9);
 		copyAndZeroingOfArray(i1, pl1, num1);
 		copyAndZeroingOfArray(i2, pl2, num2);
-	}
-
-	public void compareOfNumber(Player pl1, String s) {
-		System.out.println(pl1.getName() + s);
-	}
-
-	public void endOfAttempts(String s, Player pl1, String s2) {
-		System.out.println(s + pl1.getName() + s2);
 	}
 
 	public void winOfPlayer(int i2, Player pl2) {
@@ -71,7 +64,7 @@ public class GuessNumber {
 	}
 
 	public void copyAndZeroingOfArray(int i1, Player pl1, int num1) {
-		int[] copySaveNumb1 = Arrays.copyOf(pl1.getEnteredNum(), (i1 + 1));
+		int[] copySaveNumb1 = Arrays.copyOf(pl1.getEnteredNums(), (i1 + 1));
 		System.out.println("Введенные игроком " + pl1.getName() + " числа: " + Arrays.toString(copySaveNumb1));
 		Arrays.fill(copySaveNumb1, 0);
 	}

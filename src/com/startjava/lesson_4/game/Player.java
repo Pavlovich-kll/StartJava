@@ -12,21 +12,21 @@ public class Player {
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	public String getName() {
 		return name;
 	}
 
-	public int[] enteredNums(int num) {
-		enteredNum[attempt] = num;
+	public int[] getEnteredNums() {
 		return enteredNum;
 	}
 
 	public void setEnteredNum(int num) {
-		this.enteredNum[attempt] = num;
+		enteredNum[attempt] = num;
 		attempt++;
 	}
 
-	public int[] getEnteredNum() {
-		return enteredNum;
+	public int getEnteredNum() {
+		return enteredNum[attempt];
 	}
 }
