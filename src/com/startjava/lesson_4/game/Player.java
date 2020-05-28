@@ -29,4 +29,8 @@ public class Player {
 	public int getEnteredNum() {
 		return enteredNum[attempt-1];
 	}
+
+	public int getAttempt() {
+		return attempt-1;
+	}
 }
