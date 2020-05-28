@@ -27,6 +27,6 @@ public class Player {
 	}
 
 	public int getEnteredNum() {
-		return enteredNum[attempt];
+		return enteredNum[attempt-1];
 	}
 }

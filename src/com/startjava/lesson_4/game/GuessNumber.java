@@ -19,8 +19,6 @@ public class GuessNumber {
 		int i2 = 0;
 		do {
 			setValue(pl1);
-			System.out.println(Arrays.toString(pl1.getEnteredNums()));
-			System.out.println(pl1.getEnteredNum());
 			if (pl1.getEnteredNum() == compNum) {
 				winOfPlayer(i1, pl1);
 				i2 = i2 - 1;
@@ -35,8 +33,6 @@ public class GuessNumber {
 			}
 			i1++;
 			setValue(pl2);
-			System.out.println(Arrays.toString(pl2.getEnteredNums()));
-			System.out.println(pl2.getEnteredNum());
 			if (pl2.getEnteredNum() == compNum) {
 				winOfPlayer(i2, pl2);
 				i1 = i1 - 1;
