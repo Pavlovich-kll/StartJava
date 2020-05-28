@@ -1,0 +1,11 @@
+SELECT * FROM Jeagers;
+SELECT * FROM Jeagers WHERE mark IN ('Mark-1', 'Mark-6');
+SELECT * FROM Jeagers WHERE status != 'destroyed';
+SELECT * FROM Jeagers ORDER BY mark;
+SELECT * FROM Jeagers WHERE launch = (SELECT MIN (launch) FROM Jeagers);
+SELECT modelName, mark, kaijuKill FROM Jeagers WHERE kaijuKill = (SELECT MAX (kaijuKill) FROM Jeagers);
+SELECT modelName, mark, kaijuKill FROM Jeagers WHERE kaijuKill = (SELECT MIN (kaijuKill) FROM Jeagers);
+SELECT AVG (weight) FROM Jeagers;
+UPDATE Jeagers SET kaijuKill = kaijuKill + 1 WHERE status != 'destroyed';
+DELETE FROM Jeagers WHERE status = 'destroyed';
+SELECT * FROM Jeagers;
