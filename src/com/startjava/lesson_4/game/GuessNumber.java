@@ -56,7 +56,7 @@ public class GuessNumber {
 	public void showPlayersArray(Player pl1) {
 		int[] copySaveNumb1 = Arrays.copyOf(pl1.getPlayerAttempts(), (pl1.getAttempt() + 1));
 		System.out.println("Введенные игроком " + pl1.getName() + " числа: " + Arrays.toString(copySaveNumb1));
-		Arrays.fill(pl1.getPlayerAttempts(), 0, (pl1.getAttempt() + 1), 0);
+		Arrays.fill(pl1.getPlayerAttempts(), 0, pl1.getAttempt(), 0);
 	}
 
 }
