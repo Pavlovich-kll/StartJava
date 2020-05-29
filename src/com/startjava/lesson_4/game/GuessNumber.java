@@ -29,12 +29,6 @@ public class GuessNumber {
 		return false;
 	}
 
-	public void showPlayersArray(Player pl1) {
-		int[] copySaveNumb1 = Arrays.copyOf(pl1.getPlayerAttempts(), (pl1.getAttempt() + 1));
-		System.out.println("Введенные игроком " + pl1.getName() + " числа: " + Arrays.toString(copySaveNumb1));
-		Arrays.fill(copySaveNumb1, 0, (pl1.getAttempt() + 1), 0);
-	}
-
 	public void inputNumber(Player pl1) {
 		System.out.println("Ходит игрок " + pl1.getName());
 		int num1 = scan.nextInt();
@@ -57,6 +51,12 @@ public class GuessNumber {
 			System.out.println("У игрока " + pl1.getName() + " число попыток закончилось!");
 		}
 		return false;
+	}
+
+	public void showPlayersArray(Player pl1) {
+		int[] copySaveNumb1 = Arrays.copyOf(pl1.getPlayerAttempts(), (pl1.getAttempt() + 1));
+		System.out.println("Введенные игроком " + pl1.getName() + " числа: " + Arrays.toString(copySaveNumb1));
+		Arrays.fill(pl1.getPlayerAttempts(), 0, (pl1.getAttempt() + 1), 0);
 	}
 
 }
