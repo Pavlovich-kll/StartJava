@@ -16,41 +16,47 @@ public class GuessNumber {
 
 	public void startGame() {
 		do {
-			setValue(pl1);
-			if(endAttemptsOrCompValueIsEqualTo(pl1)) break;
-			setValue(pl2);
-			if(endAttemptsOrCompValueIsEqualTo(pl2)) break;
-		} while (pl1.getAttempt() <= 9 && pl2.getAttempt() <= 9);
-		copyAndZeroingOfArray(pl1);
-		copyAndZeroingOfArray(pl2);
+			if (makeMove(pl1)) break;
+			if (makeMove(pl2)) break;
+		} while (pl1.getAttempt() <= 8 && pl2.getAttempt() <= 9);
+		showPlayersArray(pl1);
+		showPlayersArray(pl2);
 	}
 
-	public void setValue(Player pl1) {
+	public boolean makeMove(Player pl1) {
+		inputNumber(pl1);
+		if (compare(pl1)) return true;
+		return false;
+	}
+
+	public void showPlayersArray(Player pl1) {
+		int[] copySaveNumb1 = Arrays.copyOf(pl1.getPlayerAttempts(), (pl1.getAttempt() + 1));
+		System.out.println("Введенные игроком " + pl1.getName() + " числа: " + Arrays.toString(copySaveNumb1));
+		Arrays.fill(copySaveNumb1, 0, (pl1.getAttempt() + 1), 0);
+	}
+
+	public void inputNumber(Player pl1) {
 		System.out.println("Ходит игрок " + pl1.getName());
 		int num1 = scan.nextInt();
 		pl1.setEnteredNum(num1);
 	}
 
-	public boolean endAttemptsOrCompValueIsEqualTo(Player pl1) {
+	public boolean compare(Player pl1) {
 		if (pl1.getEnteredNum() == compNum) {
 			System.out.println("игрок " + pl1.getName() + " выигрывает!");
 			System.out.println("Игрок " + pl1.getName() + " угадал число " + compNum + " с " + (pl1.getAttempt() + 1) + " попытки.");
 			return true;
-		} else if (pl1.getAttempt() == 9) {
-			System.out.println("У игрока " + pl1.getName() + " число попыток закончилось!");
-			return true;
-		} else if (pl1.getEnteredNum() < compNum) {
+		}
+		if (pl1.getEnteredNum() < compNum) {
 			System.out.println(pl1.getName() + " увеличь число!");
-		} else if (pl1.getEnteredNum() > compNum) {
+		}
+		if (pl1.getEnteredNum() > compNum) {
 			System.out.println(pl1.getName() + " уменьши число!");
 		}
+		if (pl1.getAttempt() == 9) {
+			System.out.println("У игрока " + pl1.getName() + " число попыток закончилось!");
+		}
 		return false;
-	}
-
-	public void copyAndZeroingOfArray(Player pl1) {
-		int[] copySaveNumb1 = Arrays.copyOf(pl1.getEnteredNums(), (pl1.getAttempt() + 1));
-		System.out.println("Введенные игроком " + pl1.getName() + " числа: " + Arrays.toString(copySaveNumb1));
-		Arrays.fill(copySaveNumb1, 0);
 	}
 
 }

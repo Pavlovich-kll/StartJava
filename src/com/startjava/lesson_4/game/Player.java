@@ -17,7 +17,7 @@ public class Player {
 		return name;
 	}
 
-	public int[] getEnteredNums() {
+	public int[] getPlayerAttempts() {
 		return enteredNum;
 	}
 
